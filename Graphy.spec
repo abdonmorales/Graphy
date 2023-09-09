@@ -1,5 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+import sys ; sys.setrecursionlimit(sys.getrecursionlimit() * 5)
 
 block_cipher = None
 
@@ -41,4 +42,17 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+)
+app = BUNDLE(
+    exe,
+    name='Graphy.app',
+    icon=None,
+    bundle_identifier=None,
+    version='1.0',
+    info_plist={
+            'NSPrincipalClass': 'NSApplication',
+            'NSAppleScriptEnabled': False,
+            'NSHumanReadableCopyright': '2023 © Abdon Morales',
+            'CFBundleGetInfoString': '2023 © Abdon Morales',
+            }
 )
