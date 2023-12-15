@@ -48,7 +48,7 @@ app = BUNDLE(
     name='Graphy.app',
     icon=None,
     bundle_identifier=None,
-    version='1.0',
+    version='2.0',
     info_plist={
             'NSPrincipalClass': 'NSApplication',
             'NSAppleScriptEnabled': False,
